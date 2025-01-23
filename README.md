@@ -9,7 +9,7 @@ If you've ever used a framework that integrates directly into your HTML, like [A
 
 ## Installation
 ```html
-todo
+<script defer src="https://cdn.jsdelivr.net/npm/@hydrogenmacro/tace"></script>
 ```
 > [!IMPORTANT]
 > Make sure that it is deferred and that it sits above any other script tags
