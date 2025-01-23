@@ -1,4 +1,4 @@
-[![NPM tac Package](https://img.shields.io/npm/v/tac)](https://www.npmjs.com/package/tac)
+[![NPM tace Package](https://img.shields.io/npm/v/@hydrogenmacro/tace)](https://www.npmjs.com/package/@hydrogenmacro/tace)
 
 # Templates As Custom Elements (TACE)
 TACE allows you to create reusable components in the form of custom elements easily and directly in your HTML file. 
@@ -132,7 +132,3 @@ If you've ever used a framework that integrates directly into your HTML, like [A
 ```
 
 See the `examples` directory for more that are tailored to specific frameworks.
-
-## Docs
-
-TODO
