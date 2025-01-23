@@ -1,0 +1,26 @@
+{
+  "name": "@hydrogenmacro/tace",
+  "version": "1.0.0",
+  "description": "Create reusable custom elements directly in your HTML!",
+  "main": "tace.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HydrogenMacro/tace.git"
+  },
+  "keywords": [
+    "components",
+    "html"
+  ],
+  "author": "hydrogenmacro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HydrogenMacro/tace/issues"
+  },
+  "homepage": "https://github.com/HydrogenMacro/tace#readme"
+}

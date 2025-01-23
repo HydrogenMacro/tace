@@ -21,7 +21,7 @@ for (const template of document.getElementsByTagName("template")) {
 			constructor() {
 				super();
 				if (useShadowRoot) {
-					const shadowRoot = this.atTACEhShadow({ open: "true "});
+					const shadowRoot = this.attachShadow({ open: "true "});
 					shadowRoot.appendChild(template.content.cloneNode(true));
 				} else {
 					let templateContent = template.content.cloneNode(true);

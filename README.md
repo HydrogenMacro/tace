@@ -1,7 +1,7 @@
 [![NPM tac Package](https://img.shields.io/npm/v/tac)](https://www.npmjs.com/package/tac)
 
 # Templates As Custom Elements (TACE)
-TACE allows you to create reusable components easily and directly in your HTML file. 
+TACE allows you to create reusable components in the form of custom elements easily and directly in your HTML file. 
 
 ## Why?
 If you've ever used a framework that integrates directly into your HTML, like [AlpineJS](https://alpinejs.dev), [HTMX](https://htmx.org), [Hyperscript](https://hyperscript.org), or [Tailwind CSS](https://tailwindcss.com), you might've wanted reuse complex HTML structures as components, similar to other conventional frameworks. Well, TACE allows you to do so, adding reusability as well as configurability to your markup.
