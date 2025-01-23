@@ -135,6 +135,9 @@ See the `examples` directory for more that are tailored to specific frameworks.
 
 ## Docs
 These attributes are to be used on a `template` element.
+<br>
 `component-name` - signifies that the template is a custom element, and the value must be a valid custom element name.
+<br>
 `use-shadow-root` - if the custom element should use a shadow root. Defaults to false, set to "true" to enable. Unlike native slots, slot elements will work regardless of if this is turned on or off.
+<br>
 You may also prepend `data-` to them if you use an HTML validator.
