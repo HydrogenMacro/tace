@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- 
+		Make sure to have the defer attribute, and check that 
+		it is above every other relevant script element
+		and that all script elements below are also deferred!
+	-->
+	<script defer src="../tace.js"></script>
+</head>
+
+<body>
+	<template component-name="example-component">
+		<div>Hi, I am a component!</div>
+		<b>And I can hold different elements!</b>
+	</template>
+
+	<example-component></example-component>
+	<example-component></example-component>
+	
+	<br><br><br>
+
+	<template component-name="example-component-with-slot">
+		<div>The slot below is going to be replaced by the children of the component:</div>
+		<li></li>
+		<slot></slot>
+	</template>
+	<example-component-with-slot>Hi from component 1!</example-component-with-slot>
+	<example-component-with-slot>Hi from component 2!</example-component-with-slot>
+</body>
+
+</html>

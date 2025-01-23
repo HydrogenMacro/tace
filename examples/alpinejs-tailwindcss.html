@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- 
+		Make sure to have the defer attribute, and check that 
+		it is above every other relevant script element
+		and that all relevant script elements below are also deferred/modules!
+	-->
+	<script defer src="/tace.js"></script>
+
+	<script defer src="//unpkg.com/alpinejs"></script>
+
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body x-data>
+	<!-- WARNING: Not working -->
+	<template component-name="text-button">
+		<button class="p-3 bg-red-200" x-text="$el.parentElement.getAttribute('text')"></button>
+	</template>
+	<template component-name="text-modal">
+		<div x-data="{ children: null }">
+			<!-- 
+				because slots don't play well with templates,
+				which x-teleport needs, a custom handler element
+				is used
+			-->
+			<div x-ref="childrenReceiver" x-init="children = [...$el.childNodes]">
+				<slot></slot>
+			</div>
+			<template x-teleport="body">
+				<dialog x-ref="modal" class="modal" @show.window="console.log($el, $event.detail); if ($event.detail === $el.parentElement.parentElement) $el.showModal()">
+					<div x-init="$nextTick(() => $el.append(...children))"></div>
+					<text-button @click="$refs.modal.close()" text="Close"></text-button>
+				</dialog>
+			</template>
+		</div>
+	</template>
+	<div class="flex flex-col w-vw gap-3">
+		<template x-for="i in 5">
+			<div x-data="{ modal: null }">
+				<text-modal x-ref="textModal">
+					<div x-text="`Hi from modal ${i}!`"></div>
+				</text-modal>
+				<text-button @click="console.log($refs.textModal); $dispatch('show', $refs.textModal)" :text="`Open modal ${i}`"></text-button>
+			</div>
+		</template>
+	</div>
+</body>
+
+</html>
